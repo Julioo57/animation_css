@@ -23,7 +23,7 @@ section{
     height: 700px;
     margin-bottom:20px;
 }
-#section_1, #section_2{
+#section_1, #section_2,#section_3{
     display: grid;
     place-items: center;
 }
@@ -80,6 +80,37 @@ section{
     100% {
         transform: translateY(0); /* arret de la balle */
     }
+}
+#loader{
+    display:flex;
+}
+.rec_loader{
+    border:2px solid #000;
+    width:75px;
+    height: 125px;
+    background-color: black;
+    margin-right:10px;
+}
+#load_1{
+    animation: load 1s ease-out infinite;
+}
+#load_2{
+    animation: load 3s ease-out infinite;
+}
+#load_3{
+    animation: load 5s ease-out infinite;
+}
+@keyframes load {
+    0% {
+        background-color: #fff;
+    }
+    50% {
+        background-color: grey;
+    }
+    100% {
+        background-color: #000;
+    }
+    
 }
 footer{
     padding:30px;
