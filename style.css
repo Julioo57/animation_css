@@ -22,6 +22,9 @@ section{
     width:31%;
     height: 700px;
     margin-bottom:20px;
+     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #section_1, #section_2,#section_3{
     display: grid;
@@ -92,13 +95,13 @@ section{
     margin-right:10px;
 }
 #load_1{
-    animation: load 1s ease-out infinite;
+    animation: load 2s ease-out infinite;
 }
 #load_2{
     animation: load 3s ease-out infinite;
 }
 #load_3{
-    animation: load 5s ease-out infinite;
+    animation: load 4s ease-out infinite;
 }
 @keyframes load {
     0% {
@@ -111,6 +114,135 @@ section{
         background-color: #000;
     }
     
+}
+.container_ball {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 15px;
+    width:100%;
+    height: 100%;
+    position: relative; 
+}
+
+#ball_1, #ball_2, #ball_3, #ball_4, #ball_5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;    
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+#ball_1 {
+    background-color: blue;
+    animation: waiting 5s infinite, rotate_on 1s linear infinite, change_color_1 5s infinite;
+}
+
+#ball_2 {
+    background-color: red;
+    animation: waiting 5s infinite, rotate_on 1s linear infinite, change_color_2 5s infinite;
+    animation-delay: 1s;
+}
+
+#ball_3 {
+    background-color: yellow;
+    animation: waiting 5s infinite, rotate_on 1s linear infinite, change_color_3 5s infinite;
+    animation-delay: 2s;
+}
+
+#ball_4 {
+    background-color: purple;
+    animation: waiting 5s infinite, rotate_on 1s linear infinite, change_color_4 5s infinite;
+    animation-delay: 3s;
+}
+
+#ball_5 {
+    background-color: green;
+    animation: waiting 5s infinite, rotate_on 1s linear infinite, change_color_5 5s infinite;
+    animation-delay: 4s;
+}
+
+@keyframes change_color_1{
+    from {
+        background-color: blue;
+    }
+    to{
+        background-color: red;
+    }
+}
+
+@keyframes change_color_2{
+    from {
+        background-color:red;
+    }
+    to{
+        background-color: purple;
+    }
+}
+
+@keyframes change_color_3{
+    from {
+        background-color: purple;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+
+@keyframes change_color_4{
+    from {
+        background-color: yellow;
+    }
+    to{
+        background-color: green;
+    }
+}
+
+@keyframes change_color_5{
+    from {
+        background-color: green;
+    }
+    to{
+        background-color: blue;
+    }
+}
+
+@keyframes waiting {
+    0% {
+        top: 0;
+        left: 0;
+    }
+    25% {
+        top: 0;
+        left: calc(100% - 60px);
+    }
+    30% {
+        top: 0;
+        left: calc(100% - 60px);
+    }
+    60% {
+        top: calc(100% - 60px);
+        left: calc(100% - 60px);
+    }
+   65% {
+        top: calc(100% - 60px);
+        left: 0;
+    }
+    100% {
+        top: 0;
+        left: 0;
+    }
+}
+
+@keyframes rotate_on {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 footer{
     padding:30px;
