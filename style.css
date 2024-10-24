@@ -251,3 +251,17 @@ footer{
     color:white;
     height: 150px;
 }
+#btn{
+    width:250px;
+    height:75px;
+    background-color: aquamarine;
+    border-radius: 15px;
+}
+#btn:hover{
+    transition:2s;
+    height: 700px;
+}
+#btn:not(:hover){
+    transition:2s;
+    height:75px;
+}
